@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ThunderpickMoveApp: App {
+    @StateObject private var viewModel = ViewModelTM()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashViewTM()
+                .environmentObject(viewModel)
+                .preferredColorScheme(.dark)
         }
     }
 }

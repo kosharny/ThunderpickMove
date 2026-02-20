@@ -162,10 +162,12 @@ struct JournalViewTM: View {
                                     HStack {
                                         Image(systemName: "camera.fill")
                                         Text("Photo")
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.5)
                                     }
                                     .font(.subheadline)
                                     .foregroundColor(.white)
-                                    .padding(.horizontal, 12)
+                                    .padding(.horizontal, 10)
                                     .padding(.vertical, 8)
                                     .background(Color.white.opacity(0.1))
                                     .cornerRadius(20)
@@ -187,9 +189,11 @@ struct JournalViewTM: View {
                                             .foregroundColor(isRecording ? .red : .white)
                                         Text(isRecording ? "Stop" : "Voice")
                                             .foregroundColor(isRecording ? .red : .white)
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.5)
                                     }
                                     .font(.subheadline)
-                                    .padding(.horizontal, 12)
+                                    .padding(.horizontal, 10)
                                     .padding(.vertical, 8)
                                     .background(Color.white.opacity(0.1))
                                     .cornerRadius(20)
@@ -200,7 +204,9 @@ struct JournalViewTM: View {
                                 Button(action: saveEntry) {
                                     Text("Save")
                                         .fontWeight(.bold)
-                                        .padding(.horizontal, 24)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.5)
+                                        .padding(.horizontal, 16)
                                         .padding(.vertical, 10)
                                         .background(notes.isEmpty && selectedImage == nil && recordedAudioURL == nil ? Color.gray : viewModel.currentTheme.color)
                                         .foregroundColor(.black)

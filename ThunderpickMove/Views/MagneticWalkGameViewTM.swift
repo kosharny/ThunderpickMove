@@ -68,6 +68,7 @@ struct MagneticWalkGameViewTM: View {
                         .font(.body)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 30)
                 }
                 

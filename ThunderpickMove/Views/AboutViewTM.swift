@@ -25,15 +25,10 @@ struct AboutViewTM: View {
                 
                 Spacer()
                 
-                Image(systemName: "bolt.fill")
-                    .font(.system(size: 60))
-                    .foregroundColor(.tmAccent)
-                    .glow()
-                    .padding(.bottom)
-                
-                Text("Thunderpick Move")
-                    .font(.custom("Rajdhani-Bold", size: 30))
-                    .foregroundColor(.white)
+                Image("mainLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250)
                 
                 Text("Version 1.0")
                     .font(.body)

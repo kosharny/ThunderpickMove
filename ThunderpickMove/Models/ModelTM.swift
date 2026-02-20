@@ -128,6 +128,7 @@ struct UserStats: Codable {
     var activityHistory: [Date: Int] = [:] // Date (start of day) -> Count
     var lastCheckInDate: Date?
     var lastDailyMoveDate: Date?
+    var lastDailyQuestDate: Date?
     var skillLevels: [SkillType: Int] = [ // 0-100
         .mimicry: 10,
         .posture: 10,

@@ -1,0 +1,14 @@
+# Power Posing Images
+
+This file contains the image names and descriptions required for the PowerPosingGameViewTM levels. The images should depict a glowing silhouette or line drawing of a person performing the specific pose, ideally against a dark background or with no background, matching the app's aesthetic.
+
+1.  **pose_champion**: Stand tall, arms raised in a V shape, chin slightly up. Feel the victory.
+2.  **pose_ceo**: Lean back slightly in a chair, hands clasped behind the head, elbows wide. Relaxed authority.
+3.  **pose_wonder**: Stand with feet wide apart, hands firmly on hips, chest open and proud. The classic superhero pose.
+4.  **pose_loomer**: Stand leaning forward slightly, hands planted firmly on a desk or table in front. Assertive presence.
+5.  **pose_steeple**: Sit or stand, hands joined at the fingertips forming a steeple, elbows resting or relaxed. Thoughtful contemplation.
+6.  **pose_expander**: Sit with legs stretched out to the front, arms draped over the back of adjacent chairs. Taking up space.
+7.  **pose_percher**: Sit confidently on the edge of a desk or table, arms relaxed but open. Casual command.
+8.  **pose_star**: Stand with legs wide, arms stretched out to the sides. The widest possible stance to claim space.
+9.  **pose_pillar**: Stand perfectly straight, shoulders back, arms relaxed at sides. Unshakeable grounding.
+10. **pose_anchor**: Stand with feet shoulder-width apart, hands clasped loosely behind the back. Calm observation.

@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD836B9C2F4771500034F5A4 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = DD836B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */; };
-		DD836B9E2F4771500034F5A4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD836B9D2F4771500034F5A4 /* FirebaseAuth */; };
-		DD836BA02F4771500034F5A4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD836B9F2F4771500034F5A4 /* FirebaseFirestore */; };
-		DD836BA22F4771500034F5A4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = DD836BA12F4771500034F5A4 /* FirebaseMessaging */; };
+		55666B9C2F4771500034F5A4 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 55666B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */; };
+        55666B9E2F4771500034F5A4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 55666B9D2F4771500034F5A4 /* FirebaseAuth */; };
+        55666BA02F4771500034F5A4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 55666B9F2F4771500034F5A4 /* FirebaseFirestore */; };
+        55666BA22F4771500034F5A4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 55666BA12F4771500034F5A4 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD836B8C2F4770920034F5A4 /* ThunderpickMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderpickMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    55666B8C2F4770920034F5A4 /* ThunderpickMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderpickMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DD836BF72F4788600034F5A4 /* Exceptions for "ThunderpickMove" folder in "ThunderpickMove" target */ = {
+    55666BF72F4788600034F5A4 /* Exceptions for "ThunderpickMove" folder in "ThunderpickMove" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DD836B8B2F4770920034F5A4 /* ThunderpickMove */;
+			target = 55666B8B2F4770920034F5A4 /* ThunderpickMove */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DD836B8E2F4770920034F5A4 /* ThunderpickMove */ = {
+    55666B8E2F4770920034F5A4 /* ThunderpickMove */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DD836BF72F4788600034F5A4 /* Exceptions for "ThunderpickMove" folder in "ThunderpickMove" target */,
+                          55666BF72F4788600034F5A4 /* Exceptions for "ThunderpickMove" folder in "ThunderpickMove" target */,
 			);
 			path = ThunderpickMove;
 			sourceTree = "<group>";
@@ -39,32 +39,32 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD836B892F4770920034F5A4 /* Frameworks */ = {
+    55666B892F4770920034F5A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD836BA22F4771500034F5A4 /* FirebaseMessaging in Frameworks */,
-				DD836B9C2F4771500034F5A4 /* FirebaseAnalyticsCore in Frameworks */,
-				DD836B9E2F4771500034F5A4 /* FirebaseAuth in Frameworks */,
-				DD836BA02F4771500034F5A4 /* FirebaseFirestore in Frameworks */,
+                     55666BA22F4771500034F5A4 /* FirebaseMessaging in Frameworks */,
+                     55666B9C2F4771500034F5A4 /* FirebaseAnalyticsCore in Frameworks */,
+                     55666B9E2F4771500034F5A4 /* FirebaseAuth in Frameworks */,
+                     55666BA02F4771500034F5A4 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD836B832F4770910034F5A4 = {
+    55666B832F4770910034F5A4 = {
 			isa = PBXGroup;
 			children = (
-				DD836B8E2F4770920034F5A4 /* ThunderpickMove */,
-				DD836B8D2F4770920034F5A4 /* Products */,
+                        55666B8E2F4770920034F5A4 /* ThunderpickMove */,
+                        55666B8D2F4770920034F5A4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DD836B8D2F4770920034F5A4 /* Products */ = {
+    55666B8D2F4770920034F5A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD836B8C2F4770920034F5A4 /* ThunderpickMove.app */,
+                        55666B8C2F4770920034F5A4 /* ThunderpickMove.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,71 +72,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD836B8B2F4770920034F5A4 /* ThunderpickMove */ = {
+    55666B8B2F4770920034F5A4 /* ThunderpickMove */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD836B972F4770940034F5A4 /* Build configuration list for PBXNativeTarget "ThunderpickMove" */;
+			buildConfigurationList = 55666B972F4770940034F5A4 /* Build configuration list for PBXNativeTarget "ThunderpickMove" */;
 			buildPhases = (
-				DD836B882F4770920034F5A4 /* Sources */,
-				DD836B892F4770920034F5A4 /* Frameworks */,
-				DD836B8A2F4770920034F5A4 /* Resources */,
+                           55666B882F4770920034F5A4 /* Sources */,
+                           55666B892F4770920034F5A4 /* Frameworks */,
+                           55666B8A2F4770920034F5A4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DD836B8E2F4770920034F5A4 /* ThunderpickMove */,
+                                            55666B8E2F4770920034F5A4 /* ThunderpickMove */,
 			);
 			name = ThunderpickMove;
 			packageProductDependencies = (
-				DD836B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */,
-				DD836B9D2F4771500034F5A4 /* FirebaseAuth */,
-				DD836B9F2F4771500034F5A4 /* FirebaseFirestore */,
-				DD836BA12F4771500034F5A4 /* FirebaseMessaging */,
+                                          55666B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */,
+                                          55666B9D2F4771500034F5A4 /* FirebaseAuth */,
+                                          55666B9F2F4771500034F5A4 /* FirebaseFirestore */,
+                                          55666BA12F4771500034F5A4 /* FirebaseMessaging */,
 			);
 			productName = ThunderpickMove;
-			productReference = DD836B8C2F4770920034F5A4 /* ThunderpickMove.app */;
+			productReference = 55666B8C2F4770920034F5A4 /* ThunderpickMove.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DD836B842F4770920034F5A4 /* Project object */ = {
+    55666B842F4770920034F5A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					DD836B8B2F4770920034F5A4 = {
+                    55666B8B2F4770920034F5A4 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = DD836B872F4770920034F5A4 /* Build configuration list for PBXProject "ThunderpickMove" */;
+			buildConfigurationList = 55666B872F4770920034F5A4 /* Build configuration list for PBXProject "ThunderpickMove" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DD836B832F4770910034F5A4;
+			mainGroup = 55666B832F4770910034F5A4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+                                 55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DD836B8D2F4770920034F5A4 /* Products */;
+			productRefGroup = 55666B8D2F4770920034F5A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD836B8B2F4770920034F5A4 /* ThunderpickMove */,
+                       55666B8B2F4770920034F5A4 /* ThunderpickMove */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DD836B8A2F4770920034F5A4 /* Resources */ = {
+    55666B8A2F4770920034F5A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,7 +146,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DD836B882F4770920034F5A4 /* Sources */ = {
+    55666B882F4770920034F5A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -156,7 +156,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		DD836B952F4770940034F5A4 /* Debug */ = {
+    55666B952F4770940034F5A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		DD836B962F4770940034F5A4 /* Release */ = {
+    55666B962F4770940034F5A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +277,7 @@
 			};
 			name = Release;
 		};
-		DD836B982F4770940034F5A4 /* Debug */ = {
+    55666B982F4770940034F5A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -318,7 +318,7 @@
 			};
 			name = Debug;
 		};
-		DD836B992F4770940034F5A4 /* Release */ = {
+    55666B992F4770940034F5A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -362,20 +362,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD836B872F4770920034F5A4 /* Build configuration list for PBXProject "ThunderpickMove" */ = {
+    55666B872F4770920034F5A4 /* Build configuration list for PBXProject "ThunderpickMove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD836B952F4770940034F5A4 /* Debug */,
-				DD836B962F4770940034F5A4 /* Release */,
+                                   55666B952F4770940034F5A4 /* Debug */,
+                                   55666B962F4770940034F5A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD836B972F4770940034F5A4 /* Build configuration list for PBXNativeTarget "ThunderpickMove" */ = {
+    55666B972F4770940034F5A4 /* Build configuration list for PBXNativeTarget "ThunderpickMove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD836B982F4770940034F5A4 /* Debug */,
-				DD836B992F4770940034F5A4 /* Release */,
+                                   55666B982F4770940034F5A4 /* Debug */,
+                                   55666B992F4770940034F5A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -383,7 +383,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+    55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -394,27 +394,27 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DD836B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */ = {
+    55666B9B2F4771500034F5A4 /* FirebaseAnalyticsCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsCore;
 		};
-		DD836B9D2F4771500034F5A4 /* FirebaseAuth */ = {
+    55666B9D2F4771500034F5A4 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		DD836B9F2F4771500034F5A4 /* FirebaseFirestore */ = {
+    55666B9F2F4771500034F5A4 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		DD836BA12F4771500034F5A4 /* FirebaseMessaging */ = {
+    55666BA12F4771500034F5A4 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DD836B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 55666B9A2F4771500034F5A4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = DD836B842F4770920034F5A4 /* Project object */;
+	rootObject = 55666B842F4770920034F5A4 /* Project object */;
 }

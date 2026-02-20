@@ -1,5 +1,5 @@
 import SwiftUI
-import SafariServices
+import WebKit
 
 struct SettingsViewTM: View {
     @EnvironmentObject var viewModel: ViewModelTM
@@ -8,6 +8,7 @@ struct SettingsViewTM: View {
     @State private var selectedThemeForPaywall: ThemeType?
     @State private var showMasterclass = false
     @State private var showAbout = false
+    @State private var showRestoreSuccess = false
     
     var body: some View {
         NavigationStack {
@@ -62,6 +63,9 @@ struct SettingsViewTM: View {
                     Button(action: {
                         Task {
                             await store.restorePurchases()
+                            await MainActor.run {
+                                showRestoreSuccess = true
+                            }
                         }
                     }) {
                         HStack {
@@ -125,7 +129,13 @@ struct SettingsViewTM: View {
             PaywallViewTM(theme: theme)
         }
         .sheet(isPresented: $showMasterclass) {
-            SafariView(url: URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")!)
+            WebView(url: URL(string: "https://www.youtube.com/watch?time_continue=2&v=Ks-_Mh1QhMc&embeds_referring_euri=https%3A%2F%2Fchatgpt.com%2F&source_ve_path=Mjg2NjY")!)
+                .ignoresSafeArea()
+        }
+        .alert("Purchases Restored", isPresented: $showRestoreSuccess) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("Your previous purchases have been restored successfully.")
         }
     }
     }
@@ -190,12 +200,15 @@ struct ThemeCard: View {
     }
 }
 
-struct SafariView: UIViewControllerRepresentable {
+struct WebView: UIViewRepresentable {
     let url: URL
     
-    func makeUIViewController(context: Context) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
     }
     
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {}
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
 }

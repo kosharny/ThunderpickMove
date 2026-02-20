@@ -1,0 +1,19 @@
+# Onboarding Images
+
+This file contains the descriptions for the new full-screen background images used in the Onboarding sequence. These images should be high quality, vertical (portrait) orientation, and match the app's modern, slightly cyberpunk, neon-accented aesthetic.
+
+1.  **onb_master**: 
+    - Title: Master Your Presence
+    - Visual: A dynamic, low-angle shot of a person standing confidently. They are in sharp focus against a slightly blurred, modern city or studio background. Neon accents (purple or blue) outline their silhouette, emphasizing strong, upright posture.
+
+2.  **onb_boost**: 
+    - Title: Boost Confidence
+    - Visual: A close-up or medium shot emphasizing a confident, relaxed facial expression (like a subtle smirk or intense, focused eyes). Cyberpunk-style HUD elements or glowing light reflections cross the frame, framing the subject with a feeling of internal power.
+
+3.  **onb_feedback**: 
+    - Title: Track Progress
+    - Visual: A conceptual image showing growth or data. Perhaps a glowing cyber-holographic chart, a stylized glowing skill tree, or a person interacting with a futuristic glowing interface that connects to their body. The overall tone is about analyzing and improving oneself.
+
+4.  **onb_journey**: 
+    - Title: Start Your Journey
+    - Visual: A person walking purposefully forward toward a glowing light source or an archway. The scene is slightly cinematic, lit from behind with neon edges, symbolizing stepping into a more powerful, upgraded version of themselves.

@@ -119,6 +119,11 @@ class ViewModelTM: ObservableObject {
         guard let lastDate = userStats.lastDailyMoveDate else { return false }
         return Calendar.current.isDateInToday(lastDate)
     }
+    
+    var isDailyQuestCompleted: Bool {
+        guard let lastDate = userStats.lastDailyQuestDate else { return false }
+        return Calendar.current.isDateInToday(lastDate)
+    }
 
     private let dailyMoves: [DailyPowerMove] = [
         DailyPowerMove(id: 1, title: "Superhero Stance", description: "Stand with legs shoulder-width apart, hands on hips, chest out. Hold for 2 minutes to boost testosterone and lower cortisol.", imageName: "power_pose_superhero"),
@@ -163,6 +168,20 @@ class ViewModelTM: ObservableObject {
             
             // Boost 'Posture' skill
             userStats.skillLevels[.posture, default: 0] = min(100, userStats.skillLevels[.posture, default: 0] + 5)
+            
+            logActivity()
+            saveData()
+        }
+    }
+    
+    func completeDailyQuest() {
+        if !isDailyQuestCompleted {
+            userStats.bodyScore = min(100, userStats.bodyScore + 5)
+            userStats.activitiesCompleted += 1
+            userStats.lastDailyQuestDate = Date()
+            
+            // Boost 'Mimicry' skill
+            userStats.skillLevels[.mimicry, default: 0] = min(100, userStats.skillLevels[.mimicry, default: 0] + 5)
             
             logActivity()
             saveData()

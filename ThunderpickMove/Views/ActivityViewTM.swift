@@ -1,8 +1,13 @@
 import SwiftUI
 
+enum ActiveGameTM: String, Identifiable {
+    case pokerFace, magneticWalk, powerPosing, battleMode
+    var id: String { rawValue }
+}
+
 struct ActivityViewTM: View {
     @EnvironmentObject var viewModel: ViewModelTM
-    @State private var showBattle = false
+    @State private var activeGame: ActiveGameTM?
     
     // Move data out of body
     private let modules = [
@@ -25,8 +30,17 @@ struct ActivityViewTM: View {
                 .padding(.bottom, 100)
             }
         }
-        .sheet(isPresented: $showBattle) {
-            BattleModeView()
+        .fullScreenCover(item: $activeGame) { game in
+            switch game {
+            case .pokerFace:
+                PokerFaceGameViewTM()
+            case .magneticWalk:
+                MagneticWalkGameViewTM()
+            case .powerPosing:
+                PowerPosingGameViewTM()
+            case .battleMode:
+                BattleModeGameViewTM()
+            }
         }
     }
     
@@ -67,17 +81,28 @@ struct ActivityViewTM: View {
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
-            Button(action: {
-                // Action
-            }) {
-                Text("Accept Challenge")
-                    .font(.headline)
-                    .foregroundColor(.black)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(viewModel.currentTheme.color)
-                    .cornerRadius(12)
-                    .glow(color: viewModel.currentTheme.color)
+            if viewModel.isDailyQuestCompleted {
+                HStack {
+                    Image(systemName: "checkmark.circle.fill")
+                    Text("Completed")
+                }
+                .font(.headline)
+                .foregroundColor(viewModel.currentTheme.color)
+            } else {
+                Button(action: {
+                    withAnimation {
+                        viewModel.completeDailyQuest()
+                    }
+                }) {
+                    Text("Accept Challenge")
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(viewModel.currentTheme.color)
+                        .cornerRadius(12)
+                        .glow(color: viewModel.currentTheme.color)
+                }
             }
         }
         .padding()
@@ -116,7 +141,13 @@ struct ActivityViewTM: View {
                     Spacer()
                     
                     Button(action: {
-                        // Start module
+                        if module.title == "Poker Face" {
+                            activeGame = .pokerFace
+                        } else if module.title == "Magnetic Walk" {
+                            activeGame = .magneticWalk
+                        } else if module.title == "Power Posing" {
+                            activeGame = .powerPosing
+                        }
                     }) {
                         Text("Start")
                             .font(.caption)
@@ -151,7 +182,7 @@ struct ActivityViewTM: View {
                 .foregroundColor(.gray)
             
             Button(action: {
-                showBattle = true
+                activeGame = .battleMode
             }) {
                 Text("ENTER ARENA")
                     .font(.headline)
@@ -186,57 +217,4 @@ struct TrainingModule: Identifiable {
     let icon: String
     let color: Color
     let description: String
-}
-
-struct BattleModeView: View {
-    @Environment(\.dismiss) var dismiss
-    
-    var body: some View {
-        ZStack {
-            // Battle mode might want a specific intense background, but keeping theme consistency for now
-            // Or maybe viewModel isn't available here easily? It is via EnvironmentObject if injected.
-            // But BattleModeView doesn't have viewModel environment object declared in the file snippet I have?
-            // Wait, previous file view showed it does NOT have @EnvironmentObject viewModel.
-            // I should stick to a dark background or pass it. 
-            Color.black.ignoresSafeArea() // Battle mode gets specific black background
-            
-            VStack {
-                Text("BATTLE ARENA")
-                    .font(.custom("Rajdhani-Bold", size: 30))
-                    .foregroundColor(.red)
-                    .padding()
-                
-                Spacer()
-                
-                Text("Scenario: Negotiation")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                
-                Text("Your opponent crosses their arms. What does it mean?")
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
-                VStack(spacing: 15) {
-                    Button("Defensiveness") { dismiss() }
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white.opacity(0.1))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                    
-                    Button("Relaxation") { dismiss() }
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white.opacity(0.1))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
-                
-                Spacer()
-            }
-        }
-    }
 }

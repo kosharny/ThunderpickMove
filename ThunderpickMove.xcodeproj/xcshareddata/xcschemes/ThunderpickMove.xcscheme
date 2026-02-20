@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD836B8B2F4770920034F5A4"
+               BlueprintIdentifier = "55666B8B2F4770920034F5A4"
                BuildableName = "ThunderpickMove.app"
                BlueprintName = "ThunderpickMove"
                ReferencedContainer = "container:ThunderpickMove.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD836B8B2F4770920034F5A4"
+            BlueprintIdentifier = "55666B8B2F4770920034F5A4"
             BuildableName = "ThunderpickMove.app"
             BlueprintName = "ThunderpickMove"
             ReferencedContainer = "container:ThunderpickMove.xcodeproj">
@@ -64,7 +64,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD836B8B2F4770920034F5A4"
+            BlueprintIdentifier = "55666B8B2F4770920034F5A4"
             BuildableName = "ThunderpickMove.app"
             BlueprintName = "ThunderpickMove"
             ReferencedContainer = "container:ThunderpickMove.xcodeproj">

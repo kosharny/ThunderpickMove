@@ -81,24 +81,13 @@ struct HomeViewTM: View {
                         let move = viewModel.currentDailyMove
                         
                         VStack(alignment: .leading, spacing: 10) {
-                            // Image Placeholder (In real app, assets would be loaded)
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color.black.opacity(0.5))
+                                Image(move.imageName)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(minWidth: 0, maxWidth: .infinity)
                                     .frame(height: 180)
                                     .cornerRadius(10)
-                                
-                                Image(systemName: "figure.walk") // Fallback/Placeholder
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 80)
-                                    .foregroundColor(.gray)
-                                
-                                Text(move.imageName) // For missing assets debugging
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
-                                    .offset(y: 60)
-                            }
+                                    .clipped()
                             
                             Text(move.title)
                                 .font(.title2)
@@ -149,7 +138,7 @@ struct HomeViewTM: View {
                             Text("Quick Check-in: How are you?")
                         }
                         .font(.headline)
-                        .foregroundColor(.black)
+                        .foregroundColor(viewModel.currentTheme.color)
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.white) // Contrast for this secondary button

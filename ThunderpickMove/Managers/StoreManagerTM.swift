@@ -111,6 +111,12 @@ final class StoreManagerTM: ObservableObject {
             throw StoreError.failedVerification
         }
     }
+    
+    nonisolated func paymentQueue(_ queue: SKPaymentQueue,
+                                  shouldAddStorePayment payment: SKPayment,
+                                  for product: SKProduct) -> Bool {
+        return true
+    }
 }
 
 extension StoreManagerTM {
